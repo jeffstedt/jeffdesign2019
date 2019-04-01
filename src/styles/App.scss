@@ -1,0 +1,333 @@
+$color-red: #DB5A5A;
+$color-orange: #F39C12;
+$color-pink: #EF5777;
+
+$color-black: #393939;
+$color-lightblack: #707070;
+$color-white: #fff;
+
+$desktop: 900px;
+$height: 800px;
+
+$lg-desktop: 1230px;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  color: $color-black;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,p,a,button {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  @media screen and (min-width: $desktop) {
+    font-size: 3rem;
+  }
+}
+
+h2,a,.Sub__Title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  @media screen and (min-width: $desktop) {
+    font-size: 2rem;
+  }
+}
+
+p {
+  font-size: 1.25rem;
+  @media screen and (min-width: $desktop) {
+    font-size: 1.25rem;
+  }
+  color: $color-lightblack;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+  font-weight: 800;
+}
+
+ul {
+  width: 50%;
+  padding: 0;
+  li {
+    list-style-type: none;
+    margin: .5rem 0;
+    @media screen and (min-width: $desktop) {
+      margin: 1rem 0;
+    }
+    a {
+      color: #fff;
+      border-bottom: 5px solid white;
+      letter-spacing: 3px;
+      transition: all .15s ease;
+      font-size: 2rem;
+      @media screen and (min-width: $lg-desktop) {
+        font-size: 2.5rem;
+      }
+      &:hover {
+        background: #fff;
+        color: #DB5A5A;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.Col-5 {
+  -moz-column-count: 5;
+  -moz-column-gap: 4rem;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 4rem;
+  column-count: 5;
+  column-gap: 10rem;
+}
+
+.Col-1 {
+  -moz-column-count: 1;
+  -moz-column-gap:1;
+  -webkit-column-count: 1;
+  -webkit-column-gap: 4rem;
+  column-count: 1;
+  column-gap: 10rem;
+}
+
+.Content__List {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  span {
+    display: inline-block;
+    background: $color-orange;
+    padding: .5rem 1.5rem;
+    margin: 10px;
+    margin-left: 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 1rem;
+  }
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  //background: lightgrey;
+  @media screen and (min-width: $desktop) {
+    position: fixed;
+  }
+}
+
+.Col {
+  width: 100%;
+  height: 20%;
+  top: 18rem;
+  position: absolute;
+
+  @media screen and (min-width: $desktop) {
+    top: 0;
+    width: 70%;
+    height: 100%;
+  }
+
+  @media screen and (min-width: $lg-desktop) {
+    width: 50%;
+  }
+
+}
+
+.Nav {
+  top: 0;
+  height: 15rem;
+  @media screen and (min-width: $desktop) {
+    height: 100%;
+    width: 30%;
+  }
+  @media screen and (min-width: $lg-desktop) {
+    width: 50%;
+  }
+}
+
+.Left {
+  left: 0;
+  background: #fff;
+}
+
+.Right {
+  right: 0;
+}
+
+.vCenter {
+
+@media screen and (min-width: $desktop) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+}
+
+.Content {
+  @media screen and (min-width: $desktop) {
+    padding-right: 6rem;
+  }
+}
+
+.Container {
+  padding: 0 1rem;
+  @media screen and (min-width: $desktop) {
+    padding: 0 4rem;
+  }
+}
+
+.Nav__Container {
+  width: 100%;
+  display: inline-block;
+  @media screen and (min-width: $desktop) {
+    width: 28rem;
+  }
+}
+
+.Banner {
+  background: $color-red;
+  color: $color-white;
+  padding: 0 1rem;
+}
+
+.Cta {
+  border: 5px;
+  border-style: solid;
+  padding: 1rem 3rem;
+  margin: 2rem 0;
+  border-radius: 3rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .15s ease;
+  font-size: 1.5rem;
+}
+
+.Profile__Container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 11rem;
+  margin: auto;
+  z-index: 99999;
+  width: 7rem;
+  height: 7rem;
+  transition: all .5s ease;
+  @media screen and (min-width: $desktop) {
+    left: auto;
+    right: calc(30% - (10rem/2) );
+    top: 10%;
+    bottom: auto;
+    width: 10rem;
+    height: 10rem;
+  }
+  @media screen and (min-width: $lg-desktop) {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.Nav, .Profile__Img, h1, .cta {
+  transition: all .8s ease;
+}
+
+.Red {
+  .Nav {
+    background: $color-red;
+  }
+  h1, .Cta {
+    color: $color-red;
+  }
+  .Profile__Img, .Cta {
+    border-color: $color-red;
+  }
+  .Cta {
+    &:hover {
+      background: $color-red;
+      color: $color-white;
+    }
+  }
+  ul li a {
+    &:hover {
+      color: $color-red;
+    }
+  }
+}
+
+.Orange {
+  .Nav,.Banner {
+    background: $color-orange;
+  }
+  h1, .Cta {
+    color: $color-orange;
+  }
+  .Profile__Img, .Cta {
+    border-color: $color-orange;
+  }
+  .Cta {
+    &:hover {
+      background: $color-orange;
+      color: $color-white;
+    }
+  }
+  ul li a {
+    &:hover {
+      color: $color-orange;
+    }
+  }
+  .Content__List span {
+    background: $color-orange;
+  }
+}
+
+.Pink {
+  .Nav,.Banner {
+    background: $color-pink;
+  }
+  h1, .Cta {
+    color: $color-pink;
+  }
+  .Profile__Img, .Cta {
+    border-color: $color-pink;
+  }
+  .Cta {
+    &:hover {
+      background: $color-pink;
+      color: $color-white;
+    }
+  }
+  ul li a {
+    &:hover {
+      color: $color-pink;
+    }
+  }
+  .Content__List span {
+    background: $color-pink;
+  }
+}
