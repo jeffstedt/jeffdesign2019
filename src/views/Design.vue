@@ -1,24 +1,17 @@
 <template>
-
-    <div class="View Col Left vCenter">
-
-      <Content v-bind:content="content" />
-
-    </div>
-
+  <div class="View Col Left vCenter">
+    <Content v-bind:content="content" />
+  </div>
 </template>
 
 <script>
 import Content from '../components/Content.vue'
 
 export default {
-
   name: 'Home',
-
   components: {
     Content
   },
-
   data() {
       return {
         content: [
@@ -30,6 +23,5 @@ export default {
         ]
       }
   }
-
 }
 </script>

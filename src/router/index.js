@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-//Views
 import Home from '@/views/Home'
 import Development from '@/views/Development'
 import Design from '@/views/Design'
