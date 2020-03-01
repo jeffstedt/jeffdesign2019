@@ -2,7 +2,7 @@
 
     <div class="Profile__Container">
 
-      <img class="Profile__Img" v-bind:src="'/img/' + img.src" />
+      <img class="Profile__Img" v-bind:src="'./img/' + img.src" />
 
     </div>
 
