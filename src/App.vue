@@ -1,16 +1,11 @@
 <template>
-  <div class="page" v-bind:class="setTheme">
-    <transition
-      v-on:enter="enterPage"
-      v-on:leave="leavePage"
-      v-bind:css="false"
-      appear
-    >
-     <router-view></router-view>
-    </transition>
-    <ProfileImg />
-    <Nav :changeTheme="changeTheme" />
-  </div>
+<div class="page" v-bind:class="setTheme">
+  <transition v-on:enter="enterPage" v-on:leave="leavePage" v-bind:css="false" appear>
+    <router-view></router-view>
+  </transition>
+  <ProfileImg />
+  <Nav :changeTheme="changeTheme" />
+</div>
 </template>
 
 <script>
@@ -28,12 +23,22 @@ export default {
 
   data() {
     return {
-      pages:
-        [
-          {label: 'Home', status: false, theme: 'Red'},
-          {label: 'Development', status: false, theme: 'Orange'},
-          {label: 'Design', status: false, theme: 'Pink'},
-        ]
+      pages: [{
+          label: 'Home',
+          status: false,
+          theme: 'Red'
+        },
+        {
+          label: 'Development',
+          status: false,
+          theme: 'Orange'
+        },
+        {
+          label: 'Design',
+          status: false,
+          theme: 'Pink'
+        },
+      ]
     }
   },
 
@@ -49,7 +54,7 @@ export default {
 
   methods: {
     changeTheme() {
-     this.pages.forEach((page) => page.label === this.$route.name ? (page.status = true) : (page.status = false))
+      this.pages.forEach((page) => page.label === this.$route.name ? (page.status = true) : (page.status = false))
     }
   }
 }

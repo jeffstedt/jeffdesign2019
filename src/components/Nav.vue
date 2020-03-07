@@ -1,29 +1,40 @@
 <template>
-  <div class="Nav Col vCenter">
-    <div class="Container Nav__Container">
-      <ul>
-        <li v-on:click="() => this.changeTheme()"><router-link to="/">Jeffdesign</router-link></li>
-        <li v-on:click="() => this.changeTheme()"><router-link to="/development">Development</router-link></li>
-        <li v-on:click="() => this.changeTheme()"><router-link to="/design">Design</router-link></li>
-      </ul>
-    </div>
-    </div>
+<div class="Nav Col vCenter">
+  <div class="Container Nav__Container">
+    <ul>
+      <template v-for="(route, idx) in routes">
+        <li v-on:click="() => changeTheme()" v-bind:key="idx">
+          <router-link :to="route.path">{{route.text}}</router-link>
+        </li>
+      </template>
+    </ul>
+  </div>
+</div>
 </template>
 
 <script>
-
-
 export default {
   name: 'Nav',
-
   props: {
     changeTheme: Function
   },
-
   data() {
-      return {}
+    return {
+      routes: [{
+          path: '/',
+          text: 'Jeffdesign'
+        },
+        {
+          path: '/development',
+          text: 'Development'
+        },
+        {
+          path: '/design',
+          text: 'Design'
+        }
+      ]
+    }
   }
-
 }
 </script>
 
